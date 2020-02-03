@@ -11,6 +11,8 @@ with length 1.
 - There can only be _one_ initial state.
 - There can be multiple final states.
 
+## Implementation
+
 The implementation must have _at least_ the following methods:
 
 ```java
@@ -53,3 +55,21 @@ public class FSM {
   public static FSM Whitespace();
 }
 ```
+
+## Hints
+
+- Use Java utility data structures to simplify your code.  For example, to compute
+set union and intersection, you can use the `java.util.HashSet<...>.addAll(...)` and
+`HashSet<>.retainAll(...)` methods.
+
+- Write down the algorithm mathematically first (refer to lecture notes) before diving into
+the implementation.  If you get the formal definition of the algorithms, translating them
+to Java is actually quite straightforward.  However, thinking in Java is both unpleasant and
+error prune, and you will end up with a lot of bugs that are difficult to locate.
+
+# Evaluation
+
+- You are given the `Check.java` code that checks the correctness of your implementation.
+- A `Makefile` is provided to help you with the compilation and tests.
+  - `make compile` will compile your implementation.
+  - `make check` checks your code against the expected behaviour.
